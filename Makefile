@@ -24,7 +24,11 @@ TARGETCLASS = Hello
 all : $(TARGET)
 
 $(TARGET): $(TARGET).java
+        @echo Compiling $(TARGETCLASS)
 	$(JAVAC) $(TARGET).java
+	@echo Build complete
+	@echo To run this program type `java $(TARGETCLASS)`
 
 clean : 
 	$(RM) $(TARGETCLASS).class 
+	@echo Removing $(TARGETCLASS).class
