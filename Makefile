@@ -12,7 +12,7 @@ else
 endif 
 
 # path to additional Classes
-CLASSPATH = 
+CLASSPATH = .
 BINPATH = $(JDKPATH)/bin
 JAVAC = $(JDKPATH)/bin/javac -classpath $(CLASSPATH)
 JAVA  = $(JDKPATH)/bin/java  -classpath $(CLASSPATH)
