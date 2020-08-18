@@ -1,5 +1,15 @@
-#change the JDKPATH if you are not using omega.uta.edu
-JDKPATH = /opt/jdk1.6.0_20
+HOSTNAME=$(shell hostname)
+
+ifeq "$(HOSTNAME)" "omega.uta.edu" 
+  #change the JDKPATH if you are using omega.uta.edu
+  JDKPATH = /opt/jdk1.6.0_20
+else ifeq "$(HOSTNAME)" "acadcseapp01.uta.edu"
+  #change the JDKPATH if you are using omega-csee.uta.edu
+  JDKPATH = /etc/alternatives/java_sdk
+else
+  #change the JDKPATH if you are using a different host
+  JDKPATH = /usr
+endif 
 
 # path to additional Classes
 CLASSPATH = 
