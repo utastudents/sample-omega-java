@@ -19,6 +19,7 @@ JAVA  = $(JDKPATH)/bin/java  -classpath $(CLASSPATH)
 
 # build the target class
 TARGET = hello
+TARGETCLASS = Hello
 
 all : $(TARGET)
 
@@ -26,4 +27,4 @@ $(TARGET): $(TARGET).java
 	$(JAVAC) $(TARGET).java
 
 clean : 
-	$(RM) $(TARGET) 
+	$(RM) $(TARGETCLASS).class 
